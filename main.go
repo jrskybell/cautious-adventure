@@ -3,29 +3,26 @@ package main
 import "fmt"
 
 func main() {
-	const applePrice float64 = 5.99
-	const pearPrice float64 = 7
-	const ourBudget float64 = 23
+	const applePrice float64 = 5.99 // ціна одного яблука
+	const pearPrice float64 = 7 // ціна однієї груші
+	const ourBudget float64 = 23  // бюджет
 	appleCount := 9
 	pearCount := 8
 
 	// Перший пункт
 	fmt.Printf("1. Скільки грошей треба витратити, щоб купити %v яблук та %v груш?:\n", appleCount, pearCount)
 	appleAndPearPrice := applePrice*float64(appleCount) + pearPrice*float64(pearCount)
-	fmt.Println("— Потрібно витратити", appleAndPearPrice, "гривень.")
-	println()
+	fmt.Printf("— Потрібно витратити %v гривень.\n\n", appleAndPearPrice)
 
 	// Другий пункт
 	fmt.Println("2. Скільки груш ми можемо купити?:")
 	pearsCanBuy := ourBudget / pearPrice
-	fmt.Println("— Ми можемо купити", int(pearsCanBuy), "груш.")
-	println()
+	fmt.Printf("— Ми можемо купити %v груш.\n\n", int(pearsCanBuy))
 
 	// Третій пункт
 	fmt.Println("3. Скільки яблук ми можемо купити?:")
 	applesCanBuy := ourBudget / applePrice
-	fmt.Println("— Ми можемо купити", int(applesCanBuy), "яблук.")
-	println()
+	fmt.Printf("— Ми можемо купити %v яблук.\n\n", int(applesCanBuy))
 
 	// Четвертий пункт
 	appleCount = 2
